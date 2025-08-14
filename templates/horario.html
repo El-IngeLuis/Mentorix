@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorix - Horario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>📅 Horario de Clases</h1>
+    </header>
+
+    <main>
+        <form id="form-horario">
+            <input type="text" id="materia" placeholder="Materia" required>
+            <input type="text" id="dia" placeholder="Día" required>
+            <input type="time" id="hora_inicio" required>
+            <input type="time" id="hora_fin" required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <h2>Mis Clases</h2>
+        <ul id="lista-horario"></ul>
+
+        <!-- Botón para regresar al inicio -->
+        <a href="{{ url_for('home') }}" class="btn-volver">⬅ Regresar al Inicio</a>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/horario.js') }}"></script>
+</body>
+</html>
